@@ -101,7 +101,7 @@ const MyForm = withFormik<MyFormProps, FormValues>({
     // do submitting things
     const { fullName, country } = values;
 
-    await axios.post("http://54.227.70.113:3000/user", {
+    await axios.post(`${process.env.NEXT_PUBLIC_URL}/user`, {
       fullName,
       country,
     });
